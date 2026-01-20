@@ -4,11 +4,12 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import AppHeader from "../components/AppHeader";
 
-// Import Driver screens (adjust paths based on your structure)
-import DriverHome from "../../DriverApp/src/screens/DriverHome";
-import DriverMap from "../../DriverApp/src/screens/DriverMap";
-import DriverMessages from "../../DriverApp/src/screens/DriverMessages";
-import DriverProfile from "../../DriverApp/src/screens/Profile";
+// Import Driver screens ()
+
+import DriverHome from "../screens/Driver/DriverHome";
+import DriverMap from "../screens/Driver/DriverMap";
+import DriverMessages from "../screens/Driver/DriverMessages";
+import DriverProfile from "../screens/Driver/Profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -47,11 +48,11 @@ export default function DriverAppNavigator() {
           component={DriverHome}
           options={{ title: "Home" }}
         />
-        <Tab.Screen
+         <Tab.Screen
           name="Map"
           component={DriverMap}
           options={{ title: "Map" }}
-        />
+        /> 
         <Tab.Screen
           name="Messages"
           component={DriverMessages}

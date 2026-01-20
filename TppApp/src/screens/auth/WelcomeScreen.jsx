@@ -9,7 +9,7 @@ export default function WelcomeScreen({ navigation }) {
         <View style={styles.logo}>
           <Ionicons name="bus" size={48} color="white" />
         </View>
-        <Text style={styles.title}>XYZ Transport</Text>
+        <Text style={styles.title}>Island Drive</Text>
         <Text style={styles.subtitle}>Track your bus in real-time</Text>
 
         <TouchableOpacity

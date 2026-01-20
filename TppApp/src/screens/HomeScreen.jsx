@@ -111,9 +111,9 @@ export default function PassengerHome() {
           </View>
         </View>
 
-        <TouchableOpacity 
-          style={styles.trackButton} 
-          onPress={() => navigation.navigate('Track')}
+        <TouchableOpacity
+          style={styles.trackButton}
+          onPress={() => navigation.navigate("Track")}
         >
           <Feather name="map-pin" size={16} color="#fff" />
           <Text style={styles.trackButtonText}> Track on Map</Text>
@@ -166,7 +166,7 @@ export default function PassengerHome() {
       </View>
 
       {/* Schedule */}
-      <View style={styles.card}>
+      <View style={[styles.card, { marginBottom: 32 }]}>
         <Text style={styles.cardTitle}>Today's Schedule</Text>
         {schedule.map((item, idx) => (
           <View key={idx} style={styles.scheduleRow}>

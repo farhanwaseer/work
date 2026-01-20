@@ -21,8 +21,9 @@ export default function SplashScreen({ navigation }) {
       }),
     ]).start(() => {
       setTimeout(() => {
-        navigation.replace("Login");
-      }, 1200);
+        // navigation.replace("Login");
+        navigation.replace("Welcome");
+      }, 1700);
     });
   }, []);
 
@@ -32,8 +33,8 @@ export default function SplashScreen({ navigation }) {
         <Ionicons name="bus" size={90} color="#fff" />
       </Animated.View>
 
-      <Text style={styles.title}>Driver Portal</Text>
-      <Text style={styles.subtitle}>College Transportation</Text>
+      <Text style={styles.title}>Island Drive</Text>
+      <Text style={styles.subtitle}>Track your Transportation</Text>
     </LinearGradient>
   );
 }
