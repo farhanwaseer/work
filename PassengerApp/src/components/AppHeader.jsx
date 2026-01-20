@@ -1,8 +1,11 @@
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, useContext } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { AuthContext } from "../contextApi/AuthContext";
 
 export default function AppHeader({ isOnDuty = true }) {
+  const { user } = React.useContext(AuthContext);
+
   return (
     <View style={headerStyles.container}>
       <View style={headerStyles.row}>
@@ -12,7 +15,7 @@ export default function AppHeader({ isOnDuty = true }) {
 
           <View style={headerStyles.textContainer}>
             <Text style={headerStyles.subtitle}>Welcome back</Text>
-            <Text style={headerStyles.title}> John Snow</Text>
+            <Text style={headerStyles.title}>{user?.name || "Guest"}</Text>
           </View>
         </View>
 

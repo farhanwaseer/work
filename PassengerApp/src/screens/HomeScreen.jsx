@@ -41,9 +41,12 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
 
 export default function PassengerHome() {
+  const navigation = useNavigation();
+
   const schedule = [
     {
       time: "8:45 AM",
@@ -108,7 +111,10 @@ export default function PassengerHome() {
           </View>
         </View>
 
-        <TouchableOpacity style={styles.trackButton}>
+        <TouchableOpacity 
+          style={styles.trackButton} 
+          onPress={() => navigation.navigate('Track')}
+        >
           <Feather name="map-pin" size={16} color="#fff" />
           <Text style={styles.trackButtonText}> Track on Map</Text>
         </TouchableOpacity>
@@ -208,6 +214,8 @@ export default function PassengerHome() {
     </ScrollView>
   );
 }
+
+// ... rest of styles unchanged
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: "#F9FAFB" },

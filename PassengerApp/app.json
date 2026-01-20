@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "DriverApp",
-    "slug": "driverapp",
+    "name": "Passenger App",
+    "slug": "passengerapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,7 +16,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.farhan.driverapp",
+      "package": "com.farhan.passengerapp",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
